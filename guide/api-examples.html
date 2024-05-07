@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>运行时API示例 | Qii-UI</title>
+    <meta name="description" content="qii-ui 组件库文档">
+    <meta name="generator" content="VitePress v1.1.4">
+    <link rel="preload stylesheet" href="/qii-ui-doc/assets/style.DHhQrZjX.css" as="style">
+    
+    <script type="module" src="/qii-ui-doc/assets/app.DGWDvRzy.js"></script>
+    <link rel="preload" href="/qii-ui-doc/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/qii-ui-doc/assets/chunks/theme.yVdJ6v-W.js">
+    <link rel="modulepreload" href="/qii-ui-doc/assets/chunks/framework.CC7ffbAu.js">
+    <link rel="modulepreload" href="/qii-ui-doc/assets/guide_api-examples.md.Bn0l1Rfg.lean.js">
+    <link rel="icon" href="/qii-ui-doc/favicon.svg">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-5d98c3a5><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0f60ec36></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0f60ec36> Skip to content </a><!--]--><!----><header class="VPNav" data-v-5d98c3a5 data-v-ae24b3ad><div class="VPNavBar has-sidebar top" data-v-ae24b3ad data-v-ccf7ddec><div class="wrapper" data-v-ccf7ddec><div class="container" data-v-ccf7ddec><div class="title" data-v-ccf7ddec><div class="VPNavBarTitle has-sidebar" data-v-ccf7ddec data-v-ab179fa1><a class="title" href="/qii-ui-doc/" data-v-ab179fa1><!--[--><!--]--><!--[--><img class="VPImage logo" src="/qii-ui-doc/logo.svg" alt data-v-8426fc1a><!--]--><span data-v-ab179fa1>Qii-UI</span><!--[--><!--]--></a></div></div><div class="content" data-v-ccf7ddec><div class="content-body" data-v-ccf7ddec><!--[--><!--]--><div class="VPNavBarSearch search" data-v-ccf7ddec><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-ccf7ddec data-v-7f418b0f><span id="main-nav-aria-label" class="visually-hidden" data-v-7f418b0f>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/qii-ui-doc/" tabindex="0" data-v-7f418b0f data-v-9c663999><!--[--><span data-v-9c663999>首页</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink active" href="/qii-ui-doc/guide/install.html" tabindex="0" data-v-7f418b0f data-v-9c663999><!--[--><span data-v-9c663999>指南</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/qii-ui-doc/component/button.html" tabindex="0" data-v-7f418b0f data-v-9c663999><!--[--><span data-v-9c663999>组件</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-7f418b0f data-v-b6c34ac9><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-b6c34ac9><span class="text" data-v-b6c34ac9><!----><span data-v-b6c34ac9>0.0.1-beta</span><span class="vpi-chevron-down text-icon" data-v-b6c34ac9></span></span></button><div class="menu" data-v-b6c34ac9><div class="VPMenu" data-v-b6c34ac9 data-v-e7ea1737><div class="items" data-v-e7ea1737><!--[--><!--[--><div class="VPMenuLink" data-v-e7ea1737 data-v-43f1e123><a class="VPLink link vp-external-link-icon" href="https://github.com/Qiqi29/qii-ui" target="_blank" rel="noreferrer" data-v-43f1e123><!--[-->更新日志<!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-e7ea1737 data-v-43f1e123><a class="VPLink link vp-external-link-icon" href="https://github.com/Qiqi29/qii-ui" target="_blank" rel="noreferrer" data-v-43f1e123><!--[-->参与贡献<!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-ccf7ddec data-v-e6aabb21><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-e6aabb21 data-v-d1f28634 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-d1f28634></span><span class="vpi-moon moon" data-v-d1f28634></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-ccf7ddec data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://github.com/Qiqi29/qii-ui" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-eee4e7cb><span class="vpi-social-github" /></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-ccf7ddec data-v-d0bd9dde data-v-b6c34ac9><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-b6c34ac9><span class="vpi-more-horizontal icon" data-v-b6c34ac9></span></button><div class="menu" data-v-b6c34ac9><div class="VPMenu" data-v-b6c34ac9 data-v-e7ea1737><!----><!--[--><!--[--><!----><div class="group" data-v-d0bd9dde><div class="item appearance" data-v-d0bd9dde><p class="label" data-v-d0bd9dde>Appearance</p><div class="appearance-action" data-v-d0bd9dde><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-d0bd9dde data-v-d1f28634 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-d1f28634></span><span class="vpi-moon moon" data-v-d1f28634></span><!--]--></span></span></button></div></div></div><div class="group" data-v-d0bd9dde><div class="item social-links" data-v-d0bd9dde><div class="VPSocialLinks social-links-list" data-v-d0bd9dde data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://github.com/Qiqi29/qii-ui" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-eee4e7cb><span class="vpi-social-github" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-ccf7ddec data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-ccf7ddec><div class="divider-line" data-v-ccf7ddec></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-5d98c3a5 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-a6f0e41e><span class="vpi-align-left menu-icon" data-v-a6f0e41e></span><span class="menu-text" data-v-a6f0e41e>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-17a5e62e><button data-v-17a5e62e>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-5d98c3a5 data-v-575e6a36><div class="curtain" data-v-575e6a36></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-575e6a36><span class="visually-hidden" id="sidebar-aria-label" data-v-575e6a36> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="group" data-v-575e6a36><section class="VPSidebarItem level-0" data-v-575e6a36 data-v-b8d55f3b><div class="item" role="button" tabindex="0" data-v-b8d55f3b><div class="indicator" data-v-b8d55f3b></div><h2 class="text" data-v-b8d55f3b>开发指南</h2><!----></div><div class="items" data-v-b8d55f3b><!--[--><div class="VPSidebarItem level-1 is-link" data-v-b8d55f3b data-v-b8d55f3b><div class="item" data-v-b8d55f3b><div class="indicator" data-v-b8d55f3b></div><a class="VPLink link link" href="/qii-ui-doc/guide/install.html" data-v-b8d55f3b><!--[--><p class="text" data-v-b8d55f3b>快速上手</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-b8d55f3b data-v-b8d55f3b><div class="item" data-v-b8d55f3b><div class="indicator" data-v-b8d55f3b></div><a class="VPLink link link" href="/qii-ui-doc/guide/theme.html" data-v-b8d55f3b><!--[--><p class="text" data-v-b8d55f3b>深色主题</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-5d98c3a5 data-v-1428d186><div class="VPDoc has-sidebar has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" role="navigation" data-v-3f215769 data-v-269c27a6><div class="content" data-v-269c27a6><div class="outline-marker" data-v-269c27a6></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-269c27a6>本页内容</div><ul class="VPDocOutlineItem root" data-v-269c27a6 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _qii-ui-doc_guide_api-examples" data-v-39a288b8><div><h1 id="运行时api示例" tabindex="-1">运行时API示例 <a class="header-anchor" href="#运行时api示例" aria-label="Permalink to &quot;运行时API示例&quot;">​</a></h1><p>此页面演示了VitePress提供的一些运行时API的使用。</p><p>主要的 <code>useData()</code> API可用于访问当前页面的站点、主题和页面数据。它适用于 <code>.md</code> 和 <code>.vue</code> 文件：</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> setup</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { useData } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">page</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">frontmatter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useData</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold;">## 结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold;">### 主题数据</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ theme }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### 页面数据</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ page }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### 页面 Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ frontmatter }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span></code></pre></div><h2 id="结果" tabindex="-1">结果 <a class="header-anchor" href="#结果" aria-label="Permalink to &quot;结果&quot;">​</a></h2><h3 id="主题数据" tabindex="-1">主题数据 <a class="header-anchor" href="#主题数据" aria-label="Permalink to &quot;主题数据&quot;">​</a></h3><pre>{
+  &quot;logo&quot;: &quot;/logo.svg&quot;,
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;首页&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;指南&quot;,
+      &quot;link&quot;: &quot;/guide/install&quot;,
+      &quot;activeMatch&quot;: &quot;/guide/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;组件&quot;,
+      &quot;link&quot;: &quot;/component/button&quot;,
+      &quot;activeMatch&quot;: &quot;/component/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;0.0.1-beta&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;更新日志&quot;,
+          &quot;link&quot;: &quot;https://github.com/Qiqi29/qii-ui&quot;
+        },
+        {
+          &quot;text&quot;: &quot;参与贡献&quot;,
+          &quot;link&quot;: &quot;https://github.com/Qiqi29/qii-ui&quot;
+        }
+      ]
+    }
+  ],
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;
+  },
+  &quot;sidebar&quot;: {
+    &quot;/guide/&quot;: [
+      {
+        &quot;text&quot;: &quot;开发指南&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;快速上手&quot;,
+            &quot;link&quot;: &quot;/guide/install&quot;
+          },
+          {
+            &quot;text&quot;: &quot;深色主题&quot;,
+            &quot;link&quot;: &quot;/guide/theme&quot;
+          }
+        ]
+      }
+    ],
+    &quot;/component/&quot;: [
+      {
+        &quot;text&quot;: &quot;通用组件&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;按钮 Button&quot;,
+            &quot;link&quot;: &quot;/component/button&quot;
+          },
+          {
+            &quot;text&quot;: &quot;图标 Icon&quot;,
+            &quot;link&quot;: &quot;/component/icon&quot;
+          },
+          {
+            &quot;text&quot;: &quot;链接 Link&quot;,
+            &quot;link&quot;: &quot;/component/link&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;数据展示组件&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;头像 Avatar&quot;,
+            &quot;link&quot;: &quot;/component/avatar&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;布局&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;间距 Space&quot;,
+            &quot;link&quot;: &quot;/component/space&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/Qiqi29/qii-ui&quot;
+    }
+  ],
+  &quot;outline&quot;: {
+    &quot;label&quot;: &quot;本页内容&quot;,
+    &quot;level&quot;: [
+      2,
+      3
+    ]
+  },
+  &quot;docFooter&quot;: {
+    &quot;prev&quot;: &quot;上一页&quot;,
+    &quot;next&quot;: &quot;下一页&quot;
+  },
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;最后更新于&quot;,
+    &quot;formatOptions&quot;: {
+      &quot;dateStyle&quot;: &quot;short&quot;,
+      &quot;timeStyle&quot;: &quot;short&quot;
+    }
+  },
+  &quot;footer&quot;: {
+    &quot;message&quot;: &quot;根据 MIT 许可证发布。&quot;,
+    &quot;copyright&quot;: &quot;版权所有 © 2024-至今 Qii UI&quot;
+  }
+}</pre><h3 id="页面数据" tabindex="-1">页面数据 <a class="header-anchor" href="#页面数据" aria-label="Permalink to &quot;页面数据&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;运行时API示例&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;guide/api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;guide/api-examples.md&quot;,
+  &quot;lastUpdated&quot;: 1714837968000
+}</pre><h3 id="页面-frontmatter" tabindex="-1">页面 Frontmatter <a class="header-anchor" href="#页面-frontmatter" aria-label="Permalink to &quot;页面 Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="更多" tabindex="-1">更多 <a class="header-anchor" href="#更多" aria-label="Permalink to &quot;更多&quot;">​</a></h2><p>查看文档 <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">运行时API的完整列表</a>.</p></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-d4a0bba5><!--[--><!--]--><div class="edit-info" data-v-d4a0bba5><!----><div class="last-updated" data-v-d4a0bba5><p class="VPLastUpdated" data-v-d4a0bba5 data-v-7e05ebdb>最后更新于: <time datetime="2024-05-04T15:52:48.000Z" data-v-7e05ebdb></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-d4a0bba5><span class="visually-hidden" id="doc-footer-aria-label" data-v-d4a0bba5>Pager</span><div class="pager" data-v-d4a0bba5><!----></div><div class="pager" data-v-d4a0bba5><a class="VPLink link pager-link next" href="/qii-ui-doc/guide/install.html" data-v-d4a0bba5><!--[--><span class="desc" data-v-d4a0bba5>下一页</span><span class="title" data-v-d4a0bba5>快速上手</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-5d98c3a5 data-v-e315a0ad><div class="container" data-v-e315a0ad><p class="message" data-v-e315a0ad>根据 MIT 许可证发布。</p><p class="copyright" data-v-e315a0ad>版权所有 © 2024-至今 Qii UI</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"guide_theme.md\":\"C_hJwksQ\",\"index.md\":\"BSwXd52D\",\"guide_install.md\":\"-3cvZd8m\",\"guide_markdown-examples.md\":\"4IDpUhB4\",\"component_link.md\":\"CQZKPjNc\",\"guide_api-examples.md\":\"Bn0l1Rfg\",\"component_icon.md\":\"CctLLEzU\",\"component_space.md\":\"CAc0N0h1\",\"component_avatar.md\":\"ApD-bGQD\",\"component_button.md\":\"CJ15WVoj\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"Qii-UI\",\"description\":\"qii-ui 组件库文档\",\"base\":\"/qii-ui-doc/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"/logo.svg\",\"nav\":[{\"text\":\"首页\",\"link\":\"/\"},{\"text\":\"指南\",\"link\":\"/guide/install\",\"activeMatch\":\"/guide/\"},{\"text\":\"组件\",\"link\":\"/component/button\",\"activeMatch\":\"/component/\"},{\"text\":\"0.0.1-beta\",\"items\":[{\"text\":\"更新日志\",\"link\":\"https://github.com/Qiqi29/qii-ui\"},{\"text\":\"参与贡献\",\"link\":\"https://github.com/Qiqi29/qii-ui\"}]}],\"search\":{\"provider\":\"local\"},\"sidebar\":{\"/guide/\":[{\"text\":\"开发指南\",\"items\":[{\"text\":\"快速上手\",\"link\":\"/guide/install\"},{\"text\":\"深色主题\",\"link\":\"/guide/theme\"}]}],\"/component/\":[{\"text\":\"通用组件\",\"items\":[{\"text\":\"按钮 Button\",\"link\":\"/component/button\"},{\"text\":\"图标 Icon\",\"link\":\"/component/icon\"},{\"text\":\"链接 Link\",\"link\":\"/component/link\"}]},{\"text\":\"数据展示组件\",\"items\":[{\"text\":\"头像 Avatar\",\"link\":\"/component/avatar\"}]},{\"text\":\"布局\",\"items\":[{\"text\":\"间距 Space\",\"link\":\"/component/space\"}]}]},\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/Qiqi29/qii-ui\"}],\"outline\":{\"label\":\"本页内容\",\"level\":[2,3]},\"docFooter\":{\"prev\":\"上一页\",\"next\":\"下一页\"},\"lastUpdated\":{\"text\":\"最后更新于\",\"formatOptions\":{\"dateStyle\":\"short\",\"timeStyle\":\"short\"}},\"footer\":{\"message\":\"根据 MIT 许可证发布。\",\"copyright\":\"版权所有 © 2024-至今 Qii UI\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
